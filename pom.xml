@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 1. 引入 Spring Boot 父工程，统一管理版本 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.0</version>
+        <relativePath/>
+    </parent>
+
+    <!-- 项目信息 -->
+    <groupId>com.codeboxer</groupId>
+    <artifactId>tenant-box-starter</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>TenantBox-Starter</name>
+    <description>Out-of-the-box multi-tenant Java backend starter</description>
+
+    <!-- 3. 包含所有子模块 -->
+    <modules>
+        <module>box-common</module>
+        <module>box-framework</module>
+        <module>box-system</module>
+        <module>box-schedule</module>
+        <module>box-web</module>
+    </modules>
+
+    <!-- 4. 统一 JDK 版本 -->
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>

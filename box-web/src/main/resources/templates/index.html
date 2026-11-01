@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TenantBox 首页</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 6px solid #2ea44f;
+        }
+        h1 {
+            color: #24292f;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #57606a;
+            font-size: 16px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <!-- th:text 是 Thymeleaf 的语法，用于渲染后端传过来的变量 -->
+    <h1 th:text="${projectName}">默认项目名</h1>
+    <p th:text="${desc}">默认描述</p>
+    <div class="footer">Powered by Spring Boot + Thymeleaf</div>
+</div>
+</body>
+</html>

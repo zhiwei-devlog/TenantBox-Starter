@@ -1,0 +1,25 @@
+server:
+  port: 8080 # 服务端口
+
+spring:
+  application:
+    name: TenantBox-Starter
+  # Thymeleaf 配置
+  thymeleaf:
+    enabled: true
+    encoding: UTF-8
+    suffix: .html
+    prefix: classpath:/templates
+
+# 如果你现在还没装 MySQL 和 Redis，先不要解开下面的注释，否则启动会报错！
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/tenant_box?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: your_password
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+#      database: 0
